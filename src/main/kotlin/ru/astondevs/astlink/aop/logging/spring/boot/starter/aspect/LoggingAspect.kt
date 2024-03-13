@@ -11,7 +11,8 @@ class LoggingAspect() {
     fun loggingServiceMethod() {
     }
 
-    @Pointcut("@within(ru.astondevs.astlink.aop.logging.spring.boot.starter.annotation.Loggable)")
+    @Pointcut("@within(ru.astondevs.astlink.aop.logging.spring.boot.starter.annotation.Loggable)" +
+            " || @annotation(ru.astondevs.astlink.aop.logging.spring.boot.starter.annotation.Loggable))")
     fun customLoggingServiceMethod() {
     }
 
